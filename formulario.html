@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulário de Pesquisa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .container {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 style="margin-top: 50px;">Formulário de Pesquisa</h1>
+    <form id="form-pesquisa">
+      <div class="row">
+        <div class="form-group col-md-2">
+          <label for="idade">Qual sua idade?</label>
+          <select class="form-control" id="idade" name="idade">
+            <option>-</option>
+            <option>18-24 anos</option>
+            <option>25-35 anos</option>
+            <option>36-49 anos</option>
+            <option>Mais de 50 anos</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-md-2">
+          <label for="genero">Qual seu gênero?</label>
+          <select class="form-control" id="genero" name="genero">
+            <option>-</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outro (Qual?)</option>
+            <option>Prefiro não dizer</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="estado">De qual estado você é?</label>
+          <select class="form-control" id="estado" name="estado">
+            <option value="">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="frequencia">Com que frequência você abastece seu veículo?</label>
+          <select class="form-control" id="frequencia" name="frequencia">
+            <option>-</option>
+            <option>Diariamente</option>
+            <option>2-4 vezes na semana</option>
+            <option>Semanalmente</option>
+            <option>Quinzenalmente</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="form-group col"> 
+          <label for="combustivel">Qual dos combustíveis você mais utiliza?</label>
+          <select class="form-control" id="combustivel" name="combustivel">
+            <option>-</option>
+            <option>Gasolina comum</option>
+            <option>Gasolina Aditivada</option>
+            <option>GNV</option>
+            <option>Etanol</option>
+            <option>Diesel</option>
+          </select>
+        </div>
+  
+        <div class="form-group col">
+          <label for="forma-abastecimento">Costuma completar o tanque ou abastece conforme o uso?</label>
+          <select class="form-control" id="abastecimento" name="abastecimento">
+            <option>-</option>
+            <option>Sempre completo</option>
+            <option>Completo as vezes</option>
+            <option>Conforme o uso</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="fonte-de-renda">Utiliza o veículo como fonte de renda principal ou complementar?</label>
+          <select class="form-control" id="renda" name="renda">
+            <option>-</option>
+            <option>Principal</option>
+            <option>Complementar</option>
+            <option>Não utilizo para renda</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="transporte">Utiliza o veículo para trabalhar em aplicativos de transporte?</label>
+          <select class="form-control" id="transporte" name="transporte">
+            <option>-</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="delivery">Utiliza o veículo para trabalhar em aplicativos de delivery?</label>
+          <select class="form-control" id="delivery" name="delivery">
+            <option>-</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="posto">Qual posto de combustível você mais frequenta?</label>
+          <input type="text" class="form-control" id="posto" name="posto" placeholder="Digite o posto">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="importancia">O que você acha mais importante na hora de escolher um posto de combustivel?</label>
+          <select class="form-control" id="importancia" name="importancia">
+            <option>-</option>
+            <option>Preço</option>
+            <option>Localização</option>
+            <option>Qualidade do combustivel</option>
+            <option>Conveniência</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-md-6"> 
+          <label for="fidelidade-postos">Uiliza algum aplicativo de descontos ou programa de fidelidade em postos de combustível?</label>
+          <select class="form-control" id="fidelidade-postos" name="fidelidade-postos">
+            <option>-</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group col-md-8"> 
+          <label for="fidelidade-outros">Uiliza algum aplicativo de descontos ou programa de fidelidade em outros estabelecimentos?</label>
+          <select class="form-control" id="fidelidade-outros" name="fidelidade-outros">
+            <option>-</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+  
+        <div class="form-group col-md-4">
+          <label for="conveniencia">Utiliza as lojas de conveniência dos postos?</label>
+          <select class="form-control" id="conveniencia" name="conveniencia">
+            <option>-</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 50px; margin-top: 15px;">
+        <input type="submit" class="btn btn-primary col-12" value="Enviar">
+      </div>
+    </form>
+  </div>
+
+  <!-- Script que faz a conexão do formulário com a API -->
+  <script>
+    const form = document.getElementById('form-pesquisa');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const formData = new FormData(form);
+
+      fetch('http://127.0.0.1:5000/pesquisa', {
+        method: 'POST',
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.mensagem);
+        form.reset();
+      })
+      .catch(error => console.error(error));
+    });
+  </script>
+
+</body>      
+</html>
