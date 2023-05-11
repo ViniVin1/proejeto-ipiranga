@@ -5,24 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulário de Pesquisa</title>
+  <title>Pesquisa de Consumidores - Projeto Ipiranga</title>
+  <link rel="icon" type="image/x-icon" href="fav.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <style>
-    .container {
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 50px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Prosto+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <h1 style="margin-top: 50px;">Formulário de Pesquisa</h1>
+    <h1>Pesquisa de Consumidores</h1>
     <form id="form-pesquisa">
       <div class="row">
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-2 col-sm-6">
           <label for="idade">Qual sua idade?</label>
           <select class="form-control" id="idade" name="idade">
             <option>-</option>
@@ -33,7 +30,7 @@
           </select>
         </div>
   
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-2 col-sm-6">
           <label for="genero">Qual seu gênero?</label>
           <select class="form-control" id="genero" name="genero">
             <option>-</option>
@@ -44,7 +41,7 @@
           </select>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-12">
           <label for="estado">De qual estado você é?</label>
           <select class="form-control" id="estado" name="estado">
             <option value="">Selecione o estado</option>
@@ -78,7 +75,7 @@
           </select>
         </div>
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-5 col-sm-12">
           <label for="frequencia">Com que frequência você abastece seu veículo?</label>
           <select class="form-control" id="frequencia" name="frequencia">
             <option>-</option>
@@ -194,9 +191,8 @@
         </div>
       </div>
 
-      <div class="row" style="margin-bottom: 50px; margin-top: 15px;">
         <input type="submit" class="btn btn-primary col-12" value="Enviar">
-      </div>
+      
     </form>
   </div>
 

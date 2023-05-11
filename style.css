@@ -1,0 +1,29 @@
+body {
+    zoom: 0.8;
+    background-color: #FFD100;
+    font-family: 'Prosto One', cursive;
+}
+
+.container {
+    text-align: center;
+    #background-color:lightblue;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  h1{
+    color: #0045B5;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .btn {
+    margin-bottom: 35px;
+    border-radius: 10px;
+    background-color: #0045B5;
+  }
+  
+  #form-pesquisa {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
