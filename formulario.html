@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pesquisa de Consumidores - Projeto Ipiranga</title>
-  <link rel="icon" type="image/x-icon" href="fav.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,10 @@
 
 <body>
   <div class="container">
+    <nav>
+      <img src="logo-ipiranga-azul.svg" id="logo">
+    </nav>
+    
     <h1>Pesquisa de Consumidores</h1>
     <form id="form-pesquisa">
       <div class="row">
@@ -36,7 +40,7 @@
             <option>-</option>
             <option>Masculino</option>
             <option>Feminino</option>
-            <option>Outro (Qual?)</option>
+            <option>Outros</option>
             <option>Prefiro não dizer</option>
           </select>
         </div>
@@ -162,7 +166,7 @@
         </div>
   
         <div class="form-group col-md-6"> 
-          <label for="fidelidade-postos">Uiliza algum aplicativo de descontos ou programa de fidelidade em postos de combustível?</label>
+          <label for="fidelidade-postos">Utiliza algum aplicativo de descontos ou programa de fidelidade em postos de combustível?</label>
           <select class="form-control" id="fidelidade-postos" name="fidelidade-postos">
             <option>-</option>
             <option>Sim</option>
@@ -173,7 +177,7 @@
       
       <div class="row">
         <div class="form-group col-md-8"> 
-          <label for="fidelidade-outros">Uiliza algum aplicativo de descontos ou programa de fidelidade em outros estabelecimentos?</label>
+          <label for="fidelidade-outros">Utiliza algum aplicativo de descontos ou programa de fidelidade em outros estabelecimentos?</label>
           <select class="form-control" id="fidelidade-outros" name="fidelidade-outros">
             <option>-</option>
             <option>Sim</option>

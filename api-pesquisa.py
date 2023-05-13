@@ -1,5 +1,4 @@
 import csv
-
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
@@ -41,15 +40,16 @@ def realizar_pesquisa():
     fidelidadeOutros = data['fidelidade-outros']
     conveniencia = data['conveniencia']
     salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, transporte, delivery, posto, importancia, fidelidadePostos, fidelidadeOutros, conveniencia)
-    response = jsonify({'mensagem': 'Respostas enviadas com sucesso'})
+    response = jsonify({'mensagem': 'Respostas enviadas com sucesso!!'})
     
+    # Configuração do header da API, para que possa ser acessada de qualquer origem e habilitando todos os métodos
     response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers.add('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     
     return response
 
-# Funçãr que salva os dados do formulario em um arquivo CSV
+# Função que salva os dados do formulario em um arquivo CSV
 def salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, transporte, delivery, posto, importancia, fidelidadePostos, fidelidadeOutros, conveniencia):
     with open('respostas.csv', 'a', newline='') as arquivo_csv:
         escrever = csv.writer(arquivo_csv)

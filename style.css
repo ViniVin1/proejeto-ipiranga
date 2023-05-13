@@ -1,12 +1,13 @@
 body {
     zoom: 0.8;
-    background-color: #FFD100;
+    background: rgb(255,209,0);
+    background: linear-gradient(rgba(255,209,0,1) 0%, rgba(245,205,24,0.8827906162464986) 55%, rgba(228,198,62,0.6811099439775911) 100%);
     font-family: 'Prosto One', cursive;
+    color:#0045B5;
+    font-weight: bold;
 }
 
 .container {
-    text-align: center;
-    #background-color:lightblue;
     border-radius: 50px;
     margin-top: 20px;
   }
@@ -15,6 +16,11 @@ body {
     padding-top: 10px;
     margin-bottom: 30px;
     font-weight: bold;
+    text-align: center;
+  }
+
+  form{
+    text-align: center;
   }
 
   .btn {
@@ -27,3 +33,11 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  #logo {
+    height: 50px;
+}
+
+.form-control {
+    box-shadow: 50px, 10px, #ccc;
+}
