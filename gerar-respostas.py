@@ -1,7 +1,7 @@
 import random as rd
 import csv
 
-
+# Dicionário com as informações a serem selecionadas
 dic = {
     "idade":  ['18-24 anos', '25-35 anos', '36-49 anos', 'Mais de 50 anos'],
     "genero": ["Masculino", "Feminino", "Outros", "Prefiro não dizer"],
@@ -14,14 +14,14 @@ dic = {
     "renda": ['Principal', 'Complementar', 'Não utilizo para renda'],
     "transporte": ['Sim', 'Não'],
     "delivery": ['Sim', 'Não'],
-    "posto": ['Ipiranga', 'BR', 'Shell', 'Petrobras', 'Texaco'],
+    "posto": ['Ipiranga', 'BR', 'Shell', 'Petrobras', 'Texaco', 'Ale', 'Larco', 'Setta'], 
     "importancia": ['Preço', 'Localização', 'Qualidade do combustível', 'Conveniência'],
     "fidelidade-postos": ['Sim', 'Não'],
     "fidelidade-outros": ['Sim', 'Não'],
     "conveniencia": ['Sim', 'Não']
 }
 
-
+# Função que gera os dados de forma aleatória e salva em um novo dicionário
 def gerar_dados():
     dados = {}
     dados['idade'] = dic['idade'][rd.randint(0, len(dic['idade']))-1]
@@ -41,20 +41,23 @@ def gerar_dados():
 
     return dados
 
-
-def gerar_csv():
+# Função que salva os dados gerados em um arquivo CSV
+def gerar_linha_csv():
     dados = gerar_dados()
     with open('respostas.csv', 'a', newline='') as arquivo_csv:
         escrever = csv.writer(arquivo_csv)
-        escrever.writerow([dados['idade'], dados['genero'], dados['estado'], dados['frequencia'], dados['combustivel'], dados['abastecimento'], dados['renda'], dados['transporte'], dados['delivery'], dados['posto'], dados['importancia'], dados['fidelidade-postos'], dados['fidelidade-outros'], dados['conveniencia']])
+        escrever.writerow([dados['idade'], dados['genero'], dados['estado'], 
+        dados['frequencia'], dados['combustivel'], dados['abastecimento'], dados['renda'], 
+        dados['transporte'], dados['delivery'], dados['posto'], dados['importancia'], dados['fidelidade-postos'], 
+        dados['fidelidade-outros'], dados['conveniencia']])
 
-
+# Função que define a quantidade de linhas a serem geradas
 def salvar_dados(qtd):
     for i in range(qtd):
-        gerar_csv()
+        gerar_linha_csv()
 
-
-salvar_dados(100)
+# Chamamento da função onde a quantidade de linhas a serem geradas deve ser informada dentro dos parênteses
+salvar_dados()
 
 
 
