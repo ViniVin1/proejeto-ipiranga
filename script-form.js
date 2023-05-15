@@ -1,4 +1,5 @@
 const form = document.getElementById('form-pesquisa');
+const pegaModal = document.getElementById('modal')
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -14,8 +15,12 @@ const form = document.getElementById('form-pesquisa');
       })
       .then(response => response.json())
       .then(data => {
-        alert(data.mensagem);
+        $('#modal').modal('show');
         form.reset();
       })
       .catch(error => console.error(error));
     });
+
+    function fechaModal() {
+      $('#modal').modal('hide');
+    }

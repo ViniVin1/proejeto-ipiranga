@@ -17,7 +17,7 @@
 <body>
   <div class="container">
     <nav>
-      <img src="logo-ipiranga-azul.svg" id="logo">
+      <img class="navbar-brand" src="logo-ipiranga-azul.svg" id="logo">
     </nav>
     
     <h1>Pesquisa de Consumidores</h1>
@@ -195,13 +195,37 @@
         </div>
       </div>
 
-        <input type="submit" class="btn btn-primary col-12" value="Enviar">
+        <input type="submit" id="envia" class="btn btn-primary col-12" value="Enviar">
       
     </form>
-  </div>
 
-  <!-- Script que faz a conexão do formulário com a API -->
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body">
+            <p>Dados Enviados com Sucesso!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="fechaModal()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        
+  </div>
+   
+  <!-- Arquivo javacript -->
   <script src="script-form.js"></script>
+
+  <!-- Javascript e jquery do Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
 </body>      
 </html>
+
+
