@@ -102,6 +102,7 @@
             <option>GNV</option>
             <option>Etanol</option>
             <option>Diesel</option>
+            <option>Elétrico</option>
           </select>
         </div>
   
@@ -118,32 +119,12 @@
 
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="fonte-de-renda">Utiliza o veículo como fonte de renda principal ou complementar?</label>
+          <label for="fonte-de-renda">Utiliza o veículo principalmente para/como:</label>
           <select class="form-control" id="renda" name="renda">
             <option>-</option>
-            <option>Principal</option>
-            <option>Complementar</option>
-            <option>Não utilizo para renda</option>
-          </select>
-        </div>
-  
-        <div class="form-group col-md-6">
-          <label for="transporte">Utiliza o veículo para trabalhar em aplicativos de transporte?</label>
-          <select class="form-control" id="transporte" name="transporte">
-            <option>-</option>
-            <option>Sim</option>
-            <option>Não</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group col-md-6">
-          <label for="delivery">Utiliza o veículo para trabalhar em aplicativos de delivery?</label>
-          <select class="form-control" id="delivery" name="delivery">
-            <option>-</option>
-            <option>Sim</option>
-            <option>Não</option>
+            <option>Lazer</option>
+            <option>Locomoção para o trabalho</option>
+            <option>Principal fonte de renda</option>
           </select>
         </div>
   
@@ -161,12 +142,14 @@
             <option>Preço</option>
             <option>Localização</option>
             <option>Qualidade do combustivel</option>
-            <option>Conveniência</option>
+            <option>Atendimento</option>
+            <option>Serviços Adicionais</option>
+            <option>Loja de conveniência</option>
           </select>
         </div>
   
         <div class="form-group col-md-6"> 
-          <label for="fidelidade-postos">Utiliza algum aplicativo de descontos ou programa de fidelidade em postos de combustível?</label>
+          <label for="fidelidade-postos">Você costuma utilizar aplicativos/programas de fidelidade em postos de combustível?</label>
           <select class="form-control" id="fidelidade-postos" name="fidelidade-postos">
             <option>-</option>
             <option>Sim</option>
@@ -174,26 +157,51 @@
           </select>
         </div>
       </div>
-      
+
       <div class="row">
-        <div class="form-group col-md-8"> 
-          <label for="fidelidade-outros">Utiliza algum aplicativo de descontos ou programa de fidelidade em outros estabelecimentos?</label>
-          <select class="form-control" id="fidelidade-outros" name="fidelidade-outros">
+        <div class="form-group col-md-6">
+          <label for="importancia">Você conhece o aplicativo "Abastece Aí" dos postos Ipiranga?</label>
+          <select class="form-control" id="aplicativo" name="aplicativo">
             <option>-</option>
-            <option>Sim</option>
-            <option>Não</option>
+            <option>Conheço mas não utilizo</option>
+            <option>Conheço e utilizo</option>
+            <option>Não conheço</option>
+            <option>Utilizo outros</option>
           </select>
         </div>
   
-        <div class="form-group col-md-4">
-          <label for="conveniencia">Utiliza as lojas de conveniência dos postos?</label>
-          <select class="form-control" id="conveniencia" name="conveniencia">
+        <div class="form-group col-md-6"> 
+          <label for="fidelidade-postos">Qual o principal motivo para a utilização de aplicativos/programas de fidelidade?</label>
+          <select class="form-control" id="motivo" name="motivo">
             <option>-</option>
-            <option>Sim</option>
-            <option>Não</option>
+            <option>Não utilizo aplicativos/programas de fidelidade</option>
+            <option>Descontos em abastecimento/serviços</option>
+            <option>Cashback</option>
           </select>
         </div>
       </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="conveniencia">O que você mais procura nas lojas de conveniência dos postos?</label>
+          <select class="form-control" id="conveniencia" name="conveniencia">
+            <option>-</option>
+            <option>Alimentação</option>
+            <option>Bebida</option>
+            <option>Caixa eletrônico</option>
+            <option>Outros</option>
+            <option>Não utilizo</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="posto">Em uma escala de 0-5 quanto você classificaria o posto Ipiranga?</label>
+          <input type="text" class="form-control" id="classificacao" name="classificacao" placeholder="Digite o valor">
+        </div>
+
+      </div>
+     
+        
 
         <input type="submit" id="envia" class="btn btn-primary col-12" value="Enviar">
       
@@ -215,7 +223,7 @@
       </div>
     </div>
 
-        
+   
   </div>
    
   <!-- Arquivo javacript -->

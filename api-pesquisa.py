@@ -32,14 +32,15 @@ def realizar_pesquisa():
     combustivel = data['combustivel']
     abastecimento = data['abastecimento']
     renda = data['renda']
-    transporte = data['transporte']
-    delivery = data['delivery']
     posto = data['posto']
     importancia = data['importancia']
     fidelidadePostos = data['fidelidade-postos']
-    fidelidadeOutros = data['fidelidade-outros']
+    aplicativo = data['aplicativo']
+    motivo = data['motivo']
     conveniencia = data['conveniencia']
-    salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, transporte, delivery, posto, importancia, fidelidadePostos, fidelidadeOutros, conveniencia)
+    classificacao = data['classificacao']
+    salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, posto, 
+                    importancia, fidelidadePostos, aplicativo, motivo, conveniencia, classificacao)
     response = jsonify({'mensagem': 'Respostas enviadas com sucesso!!'})
     
     # Configuração do header da API, para que possa ser acessada de qualquer origem e habilitando todos os métodos
@@ -50,10 +51,13 @@ def realizar_pesquisa():
     return response
 
 # Função que salva os dados do formulario em um arquivo CSV
-def salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, transporte, delivery, posto, importancia, fidelidadePostos, fidelidadeOutros, conveniencia):
-    with open('respostas.csv', 'a', newline='') as arquivo_csv:
+def salvar_pesquisa(idade, genero, estado, frequencia, combustivel, abastecimento, renda, posto, 
+                    importancia, fidelidadePostos, aplicativo, motivo, conveniencia, classificacao):
+    with open('respostas.csv', 'a', newline='', encoding='utf-8') as arquivo_csv:
         escrever = csv.writer(arquivo_csv)
-        escrever.writerow([idade, genero, estado, frequencia, combustivel, abastecimento, renda, transporte, delivery, posto, importancia, fidelidadePostos, fidelidadeOutros, conveniencia])
+        escrever.writerow([idade, genero, estado, frequencia, combustivel, abastecimento, renda, posto, 
+                    importancia, fidelidadePostos, aplicativo, motivo, conveniencia, classificacao])
+ 
 
 if __name__ == '__main__':
     app.run(debug=True)
