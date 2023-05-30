@@ -58,7 +58,7 @@ def salvar_dados(qtd):
         gerar_linha_csv()
 
 # Chamamento da função onde a quantidade de linhas a serem geradas deve ser informada dentro dos parênteses
-salvar_dados(4000)
+salvar_dados()
 
 
 

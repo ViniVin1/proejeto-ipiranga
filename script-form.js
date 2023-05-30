@@ -15,14 +15,14 @@ const pegaModal = document.getElementById('modal')
       })
       .then(response => response.json())
       .then(data => {
-          // Abrir o modal com a mensagem 'Dados enviados com sucesso!!'
+        // Exibe o modal com a mensagem 'Dados enviados com sucesso!!'
         $('#modal').modal('show');
         form.reset();
       })
       .catch(error => console.error(error));
     });
-    
-    // Fechar o modal
+
+    // Fecha o modal
     function fechaModal() {
       $('#modal').modal('hide');
     }

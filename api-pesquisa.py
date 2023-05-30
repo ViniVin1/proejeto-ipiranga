@@ -21,7 +21,7 @@ def realizar_pesquisa_optionals():
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     return response
 
-# Função que usa a rota do POST para pegar os dados JSON do formulario e salvar nas respectivas variáveis
+# Função que pega os dados JSON do formulario e salva nas respectivas variáveis
 @app.route('/pesquisa', methods=['POST'])
 def realizar_pesquisa():
     data = request.get_json()
